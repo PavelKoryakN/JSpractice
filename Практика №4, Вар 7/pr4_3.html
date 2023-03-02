@@ -1,0 +1,15 @@
+<body>
+<script>
+dnn = new Array('вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб');
+monn = new Array('Ян', 'Ф', 'Мар', 'Ап', 'Май', 'Июнь', 'Июль', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек');
+td = new Date();
+g = td.getFullYear();
+m = td.getMonth();
+td1=new Date(g, m+10, 31);
+g = td1.getFullYear();
+m = td1.getMonth();
+d = td1.getDate();
+dn = td1.getDay();
+alert(d+' '+monn[m]+' '+g+' года' + ' ' + dnn[dn]);
+</script>
+</body>
