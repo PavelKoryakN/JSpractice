@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Number Comment</title>
+  <script>
+    function openWindow() {
+	var num = prompt("Введите число: ");
+	var comment = "";
+        var bgcolor = "";
+        var fontst = "";
+	var fontvar = "";
+      if (num > 99 && num < 1000) {
+        if (Math.floor(num/100) == num % 10) {
+            comment = "Число трехзначное, начинается и заканчивается одинаковыми цифрами";
+	    bgcolor = "green";
+	    fontst = "normal";
+	}
+        if (Math.floor(num/100) != num % 10) {
+            comment = "Число трехзначное, не начинается и не заканчивается одинаковыми цифрами";
+	    bgcolor = "blue";
+	    fontvar = "small-caps";
+	}
+      } else {
+        comment = "Число не является трехзначным";
+	bgcolor = "orange";
+	fontst = "oblique";
+      }
+
+var newWindow = window.open("", "", "width=200,height=200");
+      newWindow.document.write("<h3 style='background-color: " + bgcolor + "; font-style: " + fontst + "; font-variant: " + fontvar + ";'>" + comment + "</h3>");
+    }
+
+    function closeWindow() {
+        window.close();
+    }
+  </script>
+</head>
+<body>
+  <button onclick="openWindow()">Start</button>
+  <button onclick="closeWindow()">Close</button>
+</body>
+</html>

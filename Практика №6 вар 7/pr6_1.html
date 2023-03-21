@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    h3 {
+      font-family: Calibri, sans-serif;
+      font-size: 24px;
+      margin: 0;
+      padding: 16px;
+    }
+    .odin {
+      background-color: green;
+      color: white;
+      font-style: normal;
+    }
+    .neodin {
+      background-color: blue;
+      color: white;
+      font-variant: small-caps;
+    }
+    .nottr {
+      background-color: orange;
+      color: white;
+      font-style: oblique;
+    }
+  </style>
+</head>
+<body>
+<script>
+    function showNum(num) {
+      var heading = document.createElement("h3");
+      if (num > 99 && num < 1000) {
+        if (Math.floor(num/100) == num % 10) {
+            heading.className = "odin";
+            heading.textContent = "Число трехзначное, начинается и заканчивается одинаковыми цифрами";
+	}
+        if (Math.floor(num/100) != num % 10) {
+            heading.className = "neodin";
+            heading.textContent = "Число трехзначное, не начинается и не заканчивается одинаковыми цифрами";
+	}
+      } else {
+        heading.className = "nottr";
+        heading.textContent = "Число не является трехзначным";
+      }
+      document.body.appendChild(heading);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var num = prompt("Введите число:");
+      num = parseInt(num);
+      showNum(num);
+    });
+  </script>
+</body>
+</html>
