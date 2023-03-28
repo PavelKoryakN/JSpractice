@@ -1,0 +1,27 @@
+<html>
+<head>
+<style>
+body {
+text-decoration: none;
+}
+</style>
+</head>
+<body>
+<p>Очень много разных буковок</p>
+<button id="change-font-line" onclick="changeFontLine()">Зачеркнуть</button>
+
+<script>
+function changeFontLine() {
+var button = document.getElementById("change-font-line");
+var body = document.getElementsByTagName("body")[0];
+if (button.innerHTML == "Зачеркнуть") {
+body.style.textDecoration = "line-through";
+button.innerHTML = "Не зачеркивать";
+} else {
+body.style.textDecoration = "none";
+button.innerHTML = "Зачеркнуть";
+}
+}
+</script>
+</body>
+</html>

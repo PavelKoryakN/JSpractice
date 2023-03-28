@@ -1,0 +1,15 @@
+<html>
+<body>
+<h1 id="demo">Если хочешь увидеть границы, тащи сюда свой курсор</h1>
+<script>
+document.getElementById("demo").onmouseover = function() {mouseOver()};
+document.getElementById("demo").onmouseout = function() {mouseOut()};
+function mouseOver() {
+  document.getElementById("demo").style.border = '3px solid black';
+}
+function mouseOut() {
+  document.getElementById("demo").style.border = 'none';
+}
+</script>
+</body>
+</html>
