@@ -1,0 +1,28 @@
+<html>
+<head>
+</head>
+<body>
+<h1 class ="r"> Заголовок класса r </h1>
+<p class ="r"> Эта строка относится к классу r</p>
+<h1> Заголовок класса НЕ r </h1>
+<p>Эта строка не относится к классу r</p>
+<input type = "button" value="Жирный" id ="1" onclick="func()">
+</body>
+
+<script>
+c=0;
+function func()
+{
+t=document.getElementById('1');
+if (c==0)
+{f="bold"; t.value="Нежирный"; c=1;}
+else{f="normal"; t.value="Жирный"; c=0;}
+
+elems = document.getElementsByClassName('r');
+for (var i = 0; i<elems.length; i++)
+{
+elems[i].style.fontWeight=f;
+}
+}
+</script>
+</html>

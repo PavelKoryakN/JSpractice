@@ -1,0 +1,17 @@
+<html>
+<body>
+<a href="#">Нажми на ссылку, чтобы отметить чекбокс</a>
+<input type="checkbox" name="myCheckbox">
+
+<script>
+const link = document.querySelector('a');
+const checkbox = document.querySelector('input[type="checkbox"]');
+
+function toggleCheckbox() {
+checkbox.checked = !checkbox.checked;
+}
+
+link.addEventListener('click', toggleCheckbox);
+</script>
+</body>
+</html>

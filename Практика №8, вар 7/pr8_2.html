@@ -1,0 +1,21 @@
+<head>
+<script>
+function func()
+{
+k=0;
+elems = document.getElementsByTagName('h2');
+for (var i = 0; i<elems.length; i++)
+{
+k=k+1;
+elems[i].style.textAlign="center";
+elems[i].innerHTML = k+'. '+ elems[i].innerHTML;
+}
+}
+</script>
+</head>
+<body>
+<h1>Заголовок 1</h1>
+<h2>Заголовок уровня 2</h2>
+<h2>Заголовок уровня 2</h2>
+<input type = "button" value="Тык сюда" onclick="func()">
+</body>
