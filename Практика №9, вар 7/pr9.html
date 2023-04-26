@@ -1,0 +1,29 @@
+<html>
+<head>
+<style>
+#im1 {position: absolute; left: 0; top: 0; width: 50%; z-index: -1;}
+#im2 {position: absolute; left: 20%; top:  20%; width: 10%;}
+</style>
+</head>
+<body>
+<img src="1.gif" id="im1">
+<img src="2.gif" id="im2">
+
+<script type="text/JavaScript">
+function f() {
+y=y+s;
+r2.style.top=y;
+if (y>=0) s=-10;
+if (y==y1) s=0;
+setTimeout("f()", 300);
+}
+
+y=400;
+s=0;
+r1 = document.getElementById('im1');
+r2 = document.getElementById('im2');
+y1 = r1.height;
+f();
+</script>
+</body>
+</html>
